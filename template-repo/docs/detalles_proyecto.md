@@ -1,17 +1,17 @@
-# Titulo del Proyecto
+# Contador de ATGC de ADN 
 
-Fecha:
+Fecha: 21/03/24
 
-**Participantes / Autor**:
+**Participantes / danielzb**:
 
 <<<<<<< Updated upstream
-- Nombre  <correo>
+- Nombre  <danielzb@lcg.unam.mx>
 =======
 -  <>
 >>>>>>> Stashed changes
 
-## Descripción del Problema
-
+## Descripción del Problema 
+El proyecto Contador de ATGC de ADN tiene como objetivo desarrollar un programa en Python que analice una secuencia genética de ADN dada y cuente las ocurrencias de los nucleótidos Adenina (A), Timina (T), Guanina (G) y Citosina (C). El programa leerá una secuencia de ADN proporcionada por el usuario y luego calculará y mostrará el recuento total de cada nucleótido en la secuencia. Esta herramienta será útil para investigadores, biólogos y estudiantes que trabajan con datos genéticos para analizar rápidamente la composición de las secuencias de ADN. 
 
 ## Especificación de Requisitos
 
