@@ -24,7 +24,7 @@ El programa puede mandar una serie de mensajes de errores, como son:
 
 ## Pruebas
 
-El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
+El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con: h
 
 ```
 ```
