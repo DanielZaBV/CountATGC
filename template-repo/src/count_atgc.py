@@ -1,89 +1,30 @@
-'''
-NAME: Daniel Bautista Vargas Daniel Zaid
-       
+# Abre el archivo en modo lectura
+with open('archivo.txt', 'r') as file:
+    # Lee la cadena de ADN del archivo
+    dna_sequence = file.read()
 
-VERSION:
-        
+# Inicializa contadores para cada símbolo
+count_A = 0
+count_C = 0
+count_G = 0
+count_T = 0
 
-AUTHOR: 
-        
+# Itera sobre la cadena de ADN y cuenta las ocurrencias de cada símbolo
+for symbol in dna_sequence:
+    if symbol == 'A':
+        count_A += 1
+    elif symbol == 'C':
+        count_C += 1
+    elif symbol == 'G':
+        count_G += 1
+    elif symbol == 'T':
+        count_T += 1
 
-DESCRIPTION: 
-        
-
-CATEGORY
-        
-
-USAGE
-
-    % python programName
-    
-
-ARGUMENTS
-
-
-METHOD
-
-
-SEE ALSO
-
-
-        
-'''
-
-def count_nucleotides(dna_sequence):
-    nucleotide_count = {'A': 0, 'T': 0, 'G': 0, 'C': 0}
-    
-    for nucleotide in dna_sequence:
-        if nucleotide in nucleotide_count:
-            nucleotide_count[nucleotide] += 1
-    
-    return nucleotide_count
-
-# Solicitar al usuario que ingrese la secuencia de ADN
-dna_sequence = 
-
-# Contar los nucleótidos en la secuencia de ADN proporcionada
-result = count_nucleotides(dna_sequence)
-
-# Mostrar los resultados
-print("Recuento de nucleótidos en la secuencia de ADN:")
-for nucleotide, count in result.items():
-    print(f"{nucleotide}: {count}")
-
-
-
-
-
-# ===========================================================================
-# =                            Command Line Options
-# ===========================================================================
-
-
-
-
-
-
-# ===========================================================================
-# =                            functions
-# ===========================================================================
-
-
-
-
-
-# ===========================================================================
-# =                            main
-# ===========================================================================
-
-
-# step 1.
-
-
-# step 2.
-
-
-# step 3.
+# Imprime el resultado
+print(f'El símbolo A aparece {count_A} veces.')
+print(f'El símbolo C aparece {count_C} veces.')
+print(f'El símbolo G aparece {count_G} veces.')
+print(f'El símbolo T aparece {count_T} veces.')
 
 
 
