@@ -1,5 +1,12 @@
+import argparse
+
+
+parser = argparse.ArgumentParser(description= 'Lee el archivo de entrada')
+parser.add_argument('input_file', type=str, help= "El archivo de texto")
+args = parser.parse_args()
+
 # Abre el archivo en modo lectura
-with open('archivo.txt', 'r') as file:
+with open(args.input_file, 'r') as file:
     # Lee la cadena de ADN del archivo
     dna_sequence = file.read()
 
