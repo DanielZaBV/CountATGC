@@ -50,9 +50,6 @@ result = count_nucleotides(dna_sequence)
 print("Recuento de nucleótidos en la secuencia de ADN:")
 for nucleotide, count in result.items():
     print(f"{nucleotide}: {count}")
-# ===========================================================================
-# =                            imports
-# ===========================================================================
 
 
 
