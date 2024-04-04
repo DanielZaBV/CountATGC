@@ -41,7 +41,7 @@ def count_nucleotides(dna_sequence):
     return nucleotide_count
 
 # Solicitar al usuario que ingrese la secuencia de ADN
-dna_sequence = input("Ingresa la secuencia de ADN: ")
+dna_sequence = 
 
 # Contar los nucleótidos en la secuencia de ADN proporcionada
 result = count_nucleotides(dna_sequence)
