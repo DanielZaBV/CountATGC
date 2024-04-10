@@ -28,7 +28,7 @@ for symbol in dna_sequence:
         count_T += 1
 
 # Imprime el resultado
-print(f'El símbolo A aparece {count_A} veces.')
+print(f' Se tienen {count_A} adeninas en la secuencia')
 print(f'El símbolo C aparece {count_C} veces.')
 print(f'El símbolo G aparece {count_G} veces.')
 print(f'El símbolo T aparece {count_T} veces.')
