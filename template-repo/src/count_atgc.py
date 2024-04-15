@@ -2,36 +2,34 @@ import argparse
 
 
 parser = argparse.ArgumentParser(description= 'Lee el archivo de entrada')
-parser.add_argument('input_file', type=str, help= "El archivo de texto")
+parser.add_argument('-i','--input_file', type=str, help= "El archivo de texto")
+parser.add_argument('-n','--nucleotides', type=str, help= "Que nucleotido buscas, separados por una coma")
 args = parser.parse_args()
+
+
 
 # Abre el archivo en modo lectura
 with open(args.input_file, 'r') as file:
     # Lee la cadena de ADN del archivo
     dna_sequence = file.read()
 
+
+nucleotidos_buscados = args.nucleotides.split(',') if args.nucleotides else ['A', 'C', 'G', 'T']
+
+
+
 # Inicializa contadores para cada símbolo
-count_A = 0
-count_C = 0
-count_G = 0
-count_T = 0
+contador = {nucleotide: 0 for nucleotide in nucleotidos_buscados}
 
 # Itera sobre la cadena de ADN y cuenta las ocurrencias de cada símbolo
 for symbol in dna_sequence:
-    if symbol == 'A':
-        count_A += 1
-    elif symbol == 'C':
-        count_C += 1
-    elif symbol == 'G':
-        count_G += 1
-    elif symbol == 'T':
-        count_T += 1
+    if symbol in nucleotidos_buscados:
+        contador[symbol] +=1
 
 # Imprime el resultado
-print(f'El símbolo A aparece {count_A} veces.')
-print(f'El símbolo C aparece {count_C} veces.')
-print(f'El símbolo G aparece {count_G} veces.')
-print(f'El símbolo T aparece {count_T} veces.')
+
+for nucleotide, count in contador.items():
+    print(f'{nucleotide}: {count}')
 
 
 
