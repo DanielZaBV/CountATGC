@@ -4,11 +4,7 @@ Fecha: 21/03/24
 
 **Participantes / danielzb**:
 
-<<<<<<< Updated upstream
 - Nombre  <danielzb@lcg.unam.mx>
-=======
--  <>
->>>>>>> Stashed changes
 
 ## Descripción del Problema 
 El proyecto Contador de ATGC de ADN tiene como objetivo desarrollar un programa en Python que analice una secuencia genética de ADN dada y cuente las ocurrencias de los nucleótidos Adenina (A), Timina (T), Guanina (G) y Citosina (C). El programa leerá una secuencia de ADN proporcionada por el usuario y luego calculará y mostrará el recuento total de cada nucleótido en la secuencia. Esta herramienta será útil para investigadores, biólogos y estudiantes que trabajan con datos genéticos para analizar rápidamente la composición de las secuencias de ADN. 
@@ -17,21 +13,24 @@ El proyecto Contador de ATGC de ADN tiene como objetivo desarrollar un programa 
 
 Requisitos funcionales
 
-<<<<<<< Updated upstream
-- Describe lo que el sistema debe de hacer:flujo de trabajo,entradas, salidas,exepciones.
+- Contar los nucleotidos de una secuencia dada
 
 
 Requisitos no funcionales
 
-- Tiempo de respuesta,capacaidad de almacenamiento,seguridad o algunas especificaciones del lenguaje de programacion, plataforma tecnologica.
+-Facilidad de uso y experiencia del usuario. 
 
 
 ## Análisis y Diseño
 
-Pequeña descripcion de la metodoliga para la resolucion del problema (super super pequeña). 
+Se proporcionan los parametros de busqueda. Programa lee el archivo de entrada. Programa imprime el resultado
 
-pseudocogido simple que ilustre la logica basica del script:
+
 ```
+Se proporcionan los parametros de busqueda
+Programa lee el archivo de entrada
+Programa imprime el resultado
+
 ```
 
 El formato de los datos de entrada.
@@ -44,46 +43,26 @@ El formato de los datos de entrada.
          +-------+-------+
                  |
                  | 1. Proporciona archivo de entrada
+                 | 2. Proporciona nucleotidos a buscar
                  v
          +-----------------+
          |                 |
-         | Lo que se hace  |
-         |                 |
+         |   Busca los     |
+         |   nucleotidos   |
          |                 |
          +-----------------+
 ```
 
-- **Actor**: quien ejecuta el programa
-- **Descripción**: El actor proporciona un archivo de entrada-Que hace el programa
-- **Flujo principal**:
+- **Actor**: Actor
+- **Descripción**: El actor proporciona un archivo de entrada-Que despues se analiza para contar los nucleaotidos A,T,G,C.
+- **Flujo principal**: 
+	- El actor proporciona un archivo de entrada.
+	- El sistema cuenta los nucleaotidos A,T,G,C.
+	- El sistema muestra el resultado.
 
 	
 - **Flujos alternativos**:
-	- Casos especiales en el programa
-=======
-Requisitos no funcionales
-
-
-## Análisis y Diseño
-
-```
-
-```
-
-
-
-#### Caso de uso: 
-
-```
-        
-```
-
-- **Actor**: 
-- **Descripción**: 
-- **Flujo principal**:
-	
-- **Flujos alternativos**:
-	
-                
-
->>>>>>> Stashed changes
+	- El actor proporciona un archivo de entrada.
+	- El actor proporciona nucleotidos a buscar
+        - El sistema busca esos nucleotidos
+        - El sistema muestra el resultado
