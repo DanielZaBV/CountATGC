@@ -62,7 +62,9 @@ El formato de los datos de entrada.
 
 	
 - **Flujos alternativos**:
-	- El actor proporciona un archivo de entrada.
+	- El actor proporciona un archivo de entrada que está vacío
+        - 	El progrma devuelve un error
+          ... etc
 	- El actor proporciona nucleotidos a buscar
         - El sistema busca esos nucleotidos
         - El sistema muestra el resultado
