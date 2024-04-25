@@ -19,7 +19,7 @@ nucleotidos_buscados = args.nucleotides.split(',') if args.nucleotides else ['A'
 
 try:
     if not dna_sequence:
-        raise ValueError("La secuencia está vacía")
+        raise ValueError("Sorry, the file is empty")
     
     # Inicializa contadores para cada símbolo
     contador = {nucleotide: 0 for nucleotide in nucleotidos_buscados}
@@ -35,7 +35,7 @@ try:
         print(f'{nucleotide}: {count}')
 
 except FileNotFoundError:
-    print("El archivo no existe")
+    print("Sorry, couldn't find the file")
 
 except ValueError as error:
     print(error)
