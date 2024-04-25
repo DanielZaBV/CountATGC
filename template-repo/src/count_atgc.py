@@ -17,19 +17,27 @@ with open(args.input_file, 'r') as file:
 nucleotidos_buscados = args.nucleotides.split(',') if args.nucleotides else ['A', 'C', 'G', 'T']
 
 
+try:
+    if not dna_sequence:
+        raise ValueError("La secuencia está vacía")
+    
+    # Inicializa contadores para cada símbolo
+    contador = {nucleotide: 0 for nucleotide in nucleotidos_buscados}
 
-# Inicializa contadores para cada símbolo
-contador = {nucleotide: 0 for nucleotide in nucleotidos_buscados}
+    # Itera sobre la cadena de ADN y cuenta las ocurrencias de cada símbolo
+    for symbol in dna_sequence:
+        if symbol in nucleotidos_buscados:
+            contador[symbol] +=1
 
-# Itera sobre la cadena de ADN y cuenta las ocurrencias de cada símbolo
-for symbol in dna_sequence:
-    if symbol in nucleotidos_buscados:
-        contador[symbol] +=1
+    # Imprime el resultado
 
-# Imprime el resultado
+    for nucleotide, count in contador.items():
+        print(f'{nucleotide}: {count}')
 
-for nucleotide, count in contador.items():
-    print(f'{nucleotide}: {count}')
+except FileNotFoundError:
+    print("El archivo no existe")
 
+except ValueError as error:
+    print(error)
 
 
