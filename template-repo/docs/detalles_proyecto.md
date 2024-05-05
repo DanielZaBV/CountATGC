@@ -23,14 +23,10 @@ Requisitos no funcionales
 
 ## Análisis y Diseño
 
-Se proporcionan los parametros de busqueda. Programa lee el archivo de entrada. Programa imprime el resultado
-
+El usurario proporciona un archivo y opcionalmente el nucleotido o nucleotidos de los cuales quiere la ocurrencia en el archivo. El programa lee el archivo, realiza la cuenta de cada nucleotido e imprime el resultado a pantalla. 
 
 ```
-Se proporcionan los parametros de busqueda
-Programa lee el archivo de entrada
-Programa imprime el resultado
-
+Python countATGC.py -i archivo.txt -n A
 ```
 
 El formato de los datos de entrada.
