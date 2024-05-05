@@ -75,6 +75,3 @@ El formato de los datos de entrada.
                 Después de leer el contenido del archivo, si la secuencia de ADN está vacía, se levanta un ValueError con el mensaje "Sorry, the file is empty".
         3. Caracteres Inválidos en la Secuencia de ADN:
                 Durante el conteo de nucleótidos, si se encuentra un símbolo que no está en los nucleótidos buscados, se levanta un ValueError con el mensaje "Sequence contains {symbol}, it's an invalid character".
-
-
-	
