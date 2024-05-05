@@ -6,11 +6,18 @@ parser.add_argument('-n', '--nucleotides', type=str, help="Que nucleotido buscas
 args = parser.parse_args()
 
 # Abre el archivo en modo lectura
-with open(args.input_file, 'r') as file:
-    # Lee la cadena de ADN del archivo
-    dna_sequence = file.read()
-    dna_sequence = dna_sequence.upper()
+try:
+    if args.input_file: 
+        with open(args.input_file, 'r') as file:
+            # Lee la cadena de ADN del archivo
+            dna_sequence = file.read()
+            dna_sequence = dna_sequence.upper()
+    else:
+        raise FileNotFoundError
+except FileNotFoundError:
+    print("Sorry, couldn't find the file")
 
+# Obtiene los nucleotidos a buscar
 nucleotidos_buscados = args.nucleotides.split(',') if args.nucleotides else ['A', 'C', 'G', 'T']
 
 try:
@@ -31,7 +38,6 @@ try:
     for nucleotide, count in contador.items():
         print(f'{nucleotide}: {count}')
 
-except FileNotFoundError:
-    print("Sorry, couldn't find the file")
+
 except ValueError as error:
     print(error)
