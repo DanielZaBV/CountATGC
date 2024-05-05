@@ -12,6 +12,7 @@ try:
             # Lee la cadena de ADN del archivo
             dna_sequence = file.read()
             dna_sequence = dna_sequence.upper()
+            dna_sequence = "".join(dna_sequence.split())
     else:
         raise FileNotFoundError
 except FileNotFoundError:
