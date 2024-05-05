@@ -56,13 +56,25 @@ El formato de los datos de entrada.
 - **Actor**: Actor
 - **Descripción**: El actor proporciona un archivo de entrada-Que despues se analiza para contar los nucleaotidos A,T,G,C.
 - **Flujo principal**: 
-	- El actor proporciona un archivo de entrada.
-	- El sistema cuenta los nucleaotidos A,T,G,C.
-	- El sistema muestra el resultado.
-
+        1. Lectura de Argumentos de Entrada:
+                El programa recibe argumentos a través de la línea de comandos: un archivo de entrada (input_file) y los nucleótidos que se desean buscar (nucleotides).
+        2. Apertura y Lectura del Archivo de Entrada:
+                El programa intenta abrir el archivo proporcionado por el usuario y lee su contenido.
+                Convierte el contenido del archivo a mayúsculas para asegurar la consistencia en la manipulación de datos.
+        3. Obtención de Nucleótidos a Buscar:
+                El programa determina qué nucleótidos buscar. Si no se especifican, usa los nucleótidos de ADN estándar: A, C, G, y T.
+        4. Conteo de Nucleótidos en la Secuencia de ADN:
+                El programa crea un contador para cada nucleótido buscado y recorre la secuencia de ADN para contar las ocurrencias de cada nucleótido.
+        5. Impresión de resultados en pantalla
 	
 - **Flujos alternativos**:
-	- El actor proporciona un archivo de entrada.
-	- El actor proporciona nucleotidos a buscar
-        - El sistema busca esos nucleotidos
-        - El sistema muestra el resultado
+        1. Archivo no Encontrado:
+                Si no se especifica un archivo de entrada, el programa levanta un FileNotFoundError.
+                Si el archivo no existe o no puede ser encontrado, se maneja el FileNotFoundError y se muestra el mensaje "Sorry, couldn't find the file".
+        2. Archivo Vacío:
+                Después de leer el contenido del archivo, si la secuencia de ADN está vacía, se levanta un ValueError con el mensaje "Sorry, the file is empty".
+        3. Caracteres Inválidos en la Secuencia de ADN:
+                Durante el conteo de nucleótidos, si se encuentra un símbolo que no está en los nucleótidos buscados, se levanta un ValueError con el mensaje "Sequence contains {symbol}, it's an invalid character".
+
+
+	
